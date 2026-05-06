@@ -1,20 +1,7 @@
-import { ClaudeService } from './claude';
 import { DeepseekService } from './deepseek';
 
-type ProviderName = 'anthropic' | 'deepseek';
-
-function getProviderName(): ProviderName {
-  const provider = (process.env.AI_PROVIDER || 'anthropic').trim().toLowerCase();
-  if (provider === 'deepseek') return 'deepseek';
-  return 'anthropic';
-}
-
 function getProvider() {
-  const provider = getProviderName();
-  if (provider === 'deepseek') {
-    return DeepseekService;
-  }
-  return ClaudeService;
+  return DeepseekService;
 }
 
 export const AIService = {
