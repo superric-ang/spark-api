@@ -10,7 +10,8 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "start": "node apps/api/dist/server.js"
   },
   "devDependencies": {
     "turbo": "^1.10.0"
